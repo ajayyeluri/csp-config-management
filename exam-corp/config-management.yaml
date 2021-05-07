@@ -11,6 +11,5 @@ spec:
     syncBranch: anthos-exam-corp
     secretType: ssh
     policyDir: "exam-corp/config-root"
-
-# https://github.com/ajayyeluri/csp-config-management/blob/0d0fd63eb82c0b6534d094a6d6fd1920194a8428/exam-corp/config-management.yaml
-
+  policyController:
+    enabled: true
