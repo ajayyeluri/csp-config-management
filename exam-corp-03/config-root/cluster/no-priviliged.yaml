@@ -8,5 +8,4 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
-    # namespaces:
-    #  - "default"
+    excludedNamespaces: ["kube-system"]
