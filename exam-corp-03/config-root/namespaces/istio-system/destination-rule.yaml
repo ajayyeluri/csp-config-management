@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  annotations:
+    meshsecurityinsights.googleapis.com/generated: "1561996419000000000"
+  name: default
+  namespace: istio-system
+spec:
+  host: '*.local'
+  trafficPolicy:
+    tls:
+      mode: ISTIO_MUTUAL
+      
+# Istio set a traffic policy that enables TLS for all matching hosts in the cluster by using TLSmode ISTIO_MUTUAL

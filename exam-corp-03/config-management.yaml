@@ -1,0 +1,15 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+  namespace: config-management-system
+spec:
+  clusterName: exam
+  git:
+    syncRepo: git@github.com:ajayyeluri/csp-config-management.git
+    # syncRepo: https://github.com/ajayyeluri/csp-config-management.git
+    syncBranch: anthos-exam-corp
+    secretType: ssh
+    policyDir: "exam-corp/config-root"
+  policyController:
+    enabled: true
